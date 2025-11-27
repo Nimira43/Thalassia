@@ -11,27 +11,24 @@ const Header = () => {
         collapseOnSelect
       >
         <Container>
-          <Navbar.Brand
-            href='/'
-            className='logo no-hover'
-          >
-            Thalassia
-          </Navbar.Brand>
+          <LinkContainer to='/'>
+            <Navbar.Brand className='logo no-hover'>
+              Thalassia
+            </Navbar.Brand>
+          </LinkContainer>          
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <Nav.Link
-                href='/cart'
-                className='nav-link-custom'
-              >
-                <PiShoppingCart /> Cart
-              </Nav.Link>
-              <Nav.Link
-                href='/login'
-                className='nav-link-custom'
-              >
-                <PiUser /> Login
-              </Nav.Link>
+              <LinkContainer to='/cart'>
+                <Nav.Link className='nav-link-custom'>
+                  <PiShoppingCart /> Cart
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/login'>
+                <Nav.Link className='nav-link-custom'>
+                  <PiUser /> Login
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>
