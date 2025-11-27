@@ -12,10 +12,10 @@
   --black: #000;
   --dark: #111;
   --light: #fffcfa;
-  --grey-dark: #333;
-  --grey-medium: #999;
-  --grey-light: #ccc;
-  --grey-light-extra: #eee;
+  --grey-1: #333;
+  --grey-2: #999;
+  --grey-3: #ccc;
+  --grey-4: #eee;
   --transition: all 0.5s ease-in;
 }
 
@@ -33,7 +33,6 @@
 .bg-main {
   background-color: var(--main);
 }
-
 .text-main {
   color: var(--main);
 }
@@ -41,7 +40,6 @@
 .bg-support {
   background-color: var(--support);
 }
-
 .text-support {
   color: var(--support);
 }
@@ -49,7 +47,6 @@
 .bg-gold {
   background-color: var(--gold);
 }
-
 .text-gold {
   color: var(--gold);
 }
@@ -57,7 +54,6 @@
 .bg-dark-col {
   background-color: var(--dark);
 }
-
 .text-dark-col {
   color: var(--dark);
 }
@@ -65,41 +61,41 @@
 .bg-light-col {
   background-color: var(--light);
 }
-
 .text-light-col {
   color: var(--light);
 }
 
-.bg-grey-dark {
-  background-color: var(--grey-dark);
+.bg-grey-1 {
+  background-color: var(--grey-1);
+}
+.text-grey-1 {
+  color: var(--grey-1);
 }
 
-.text-grey-dark {
-  color: var(--grey-dark);
+.bg-grey-2 {
+  background-color: var(--grey-2);
+}
+.text-grey-2 {
+  color: var(--grey-2);
 }
 
-.bg-grey-medium {
-  background-color: var(--grey-medium);
+.bg-grey-3 {
+  background-color: var(--grey-3);
+}
+.text-grey-3 {
+  color: var(--grey-3);
 }
 
-.text-grey-medium {
-  color: var(--grey-medium);
+.bg-grey-4 {
+  background-color: var(--grey-4);
 }
 
-.bg-grey-light {
-  background-color: var(--grey-light);
+.text-grey-4 {
+  color: var(--grey-4);
 }
 
-.text-grey-light {
-  color: var(--grey-light);
-}
-
-.bg-grey-light-extra {
-  background-color: var(--grey-light-extra);
-}
-
-.text-grey-light-extra {
-  color: var(--grey-light-extra);
+.text-main:hover {
+  color: var(--dark);
 }
 
 .main-btn {
