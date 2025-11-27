@@ -174,13 +174,11 @@
   border: 1px solid var(--main);
   background-color: var(--main);
   color: var(--light);
-  text-transform: uppercase;
-  transition: var(--transition);
 }
 
 .main-btn:hover {
-  background-color: var(--main-hover);
   border-color: var(--main-hover);
+  background-color: var(--main-hover);
   color: var(--light);
 }
 
@@ -188,8 +186,6 @@
   border: 1px solid var(--main);
   background-color: transparent;
   color: var(--main);
-  text-transform: uppercase;
-  transition: var(--transition);
 }
 
 .main-btn-outline:hover {
