@@ -2,7 +2,7 @@ import { PiStarFill, PiStarHalfFill, PiStar } from 'react-icons/pi'
 
 const Rating = () => {
   return ( 
-    <div>Rating</div>
+    <div className='rating'>Rating</div>
    )
 }
  

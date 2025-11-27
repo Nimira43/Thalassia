@@ -21,6 +21,10 @@
   --transition: all 0.5s ease-in;
 }
 
+main {
+  min-height: 80vh; /* experimental */
+}
+
 .logo {
   font-family: 'Ephesis', cursive;
   font-size: 2rem;
@@ -193,5 +197,18 @@
   color: var(--light);
 }
 
+/* experimental */
+.rating span {
+  margin: 0.1rem;           
+}
 
+.rating svg {
+  color: var(--main);
+}
 
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-left: 0.5rem;
+}
+/* end of experimental */
