@@ -115,7 +115,7 @@
 }
 
 .navbar-toggler-icon::before {
-  content: "≡";
+  content: '≡';
   color: var(--dark);
   font-size: 2rem;
   transition: var(--transition);
