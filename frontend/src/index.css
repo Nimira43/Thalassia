@@ -116,7 +116,31 @@
 }
 
 .navbar-brand.no-hover {
-  /* pointer-events: none; */
   background: none;
   color: var(--main);
+}
+
+.navbar-toggler {
+  border: none;
+  transition: var(--transition);
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+}
+
+.navbar-toggler-icon::before {
+  content: "≡";
+  color: var(--main);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.navbar-toggler-icon:hover::before {
+  color: var(--dark);
 }

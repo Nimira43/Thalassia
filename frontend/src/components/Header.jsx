@@ -16,6 +16,7 @@ const Header = () => {
           >
             Thalassia
           </Navbar.Brand>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
         </Container>
       </Navbar>
     </header>
