@@ -87,13 +87,42 @@
 .bg-grey-4 {
   background-color: var(--grey-4);
 }
-
 .text-grey-4 {
   color: var(--grey-4);
 }
 
 .hover-transition {
   transition: var(--transition);
+}
+
+.navbar-brand.no-hover {
+  background: none;
+  color: var(--main);
+}
+
+.navbar-toggler {
+  border: none;
+  transition: var(--transition);
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+}
+
+.navbar-toggler-icon::before {
+  content: "≡";
+  color: var(--dark);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.navbar-toggler-icon:hover::before {
+  color: var(--main);
 }
 
 .nav-link-custom {
@@ -168,33 +197,5 @@
   color: var(--light);
 }
 
-.navbar-brand.no-hover {
-  background: none;
-  color: var(--main);
-}
 
-.navbar-toggler {
-  border: none;
-  transition: var(--transition);
-}
-
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.navbar-toggler-icon {
-  background-image: none;
-}
-
-.navbar-toggler-icon::before {
-  content: "≡";
-  color: var(--main);
-  font-size: 2rem;
-  transition: var(--transition);
-}
-
-.navbar-toggler-icon:hover::before {
-  color: var(--dark);
-}
 

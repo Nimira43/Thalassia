@@ -5,7 +5,7 @@ const Header = () => {
   return ( 
     <header>
       <Navbar
-        className='bg-grey-light-extra text-main'
+        className='bg-grey-4 text-main'
         expand='lg'
         collapseOnSelect
       >
@@ -25,23 +25,16 @@ const Header = () => {
               >
                 <PiShoppingCart /> Cart
               </Nav.Link>
+              <Nav.Link
+                href='/login'
+                className='nav-link-custom'
+              >
+                <PiUser /> Login
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div>
-        <button className='dark-btn btn'>Test</button>
-      </div>
-      <div>
-        <button className='dark-btn-outline btn'>Test</button>
-      </div>
-      <div>
-        <button className='main-btn btn'>Test</button>
-      </div>
-      <div>
-        <button className='main-btn-outline btn'>Test</button>
-      </div>
-
     </header>
   )
 }
