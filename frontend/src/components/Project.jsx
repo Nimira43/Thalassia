@@ -17,6 +17,9 @@ const Product = ({ product }) => {
             </strong>
           </Card.Title>
         </a>
+        <Card.Text as='h3'>
+          £{product.price}
+        </Card.Text>
       </Card.Body>
     </Card>
   )
