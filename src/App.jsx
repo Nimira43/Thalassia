@@ -5,12 +5,12 @@ const App = () => {
         <h1 className='logo'>Thalassia</h1>
       </div>
       <div>
-        <button class='btn btn-primary'>
+        <button className='btn btn-primary'>
           Bootstrap Button
         </button>
       </div>
       <div>
-        <button class='btn main-btn'>
+        <button className='btn main-btn'>
           Pharos Button
         </button>
       </div>
