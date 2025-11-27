@@ -10,14 +10,21 @@ const Product = ({ product }) => {
         />
       </a>
       <Card.Body>
-        <a href={`/product/${product._id}`}>
-          <Card.Title as='div'>
-            <strong>
+        <a
+          className='text-decoration-none'
+          href={`/product/${product._id}`}
+        >
+          <Card.Title
+            className='text-dark fw-normal'
+            as='div'
+          >
               {product.name}
-            </strong>
           </Card.Title>
         </a>
-        <Card.Text as='h3'>
+        <Card.Text
+          className='text-main fw-normal'
+          as='h3'
+        >
           £{product.price}
         </Card.Text>
       </Card.Body>
