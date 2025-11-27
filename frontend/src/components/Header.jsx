@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { PiShoppingCart, PiUser } from 'react-icons/pi'
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Header = () => {
   return ( 
