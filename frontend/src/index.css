@@ -22,6 +22,7 @@
 .logo {
   font-family: 'Ephesis', cursive;
   font-size: 2.5rem;
+  font-weight: bold;
   color: var(--main);
 }
 
@@ -112,4 +113,10 @@
 .main-btn:hover {
   background-color: var(--dark);
   color: var(--light);
+}
+
+.navbar-brand.no-hover {
+  /* pointer-events: none; */
+  background: none;
+  color: var(--main);
 }

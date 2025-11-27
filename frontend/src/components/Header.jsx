@@ -1,9 +1,24 @@
 import { Navbar, Nav, Container } from 'react-bootstrap'
-
+import { PiShoppingCart, PiUser } from 'react-icons/pi'
 
 const Header = () => {
   return ( 
-    <div>Header</div>
+    <header>
+      <Navbar
+        className='bg-grey-light-extra text-main'
+        expand='lg'
+        collapseOnSelect
+      >
+        <Container>
+          <Navbar.Brand
+            href='/'
+            className='logo no-hover'
+          >
+            Thalassia
+          </Navbar.Brand>
+        </Container>
+      </Navbar>
+    </header>
   )
 }
  
