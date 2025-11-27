@@ -4,9 +4,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return ( 
-    <div>
-      Footer
-    </div>
+    <footer>
+      <Container>
+        <Row>
+          <Col className='text-center py-3'>
+          
+          </Col>
+        </Row>
+      </Container>      
+    </footer>
    )
 }
  
