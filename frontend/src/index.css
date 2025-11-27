@@ -7,7 +7,9 @@
 
 :root {
   --main: #ff4500;
+  --main-hover: #ff7040;
   --support: #008080;
+  --support-hover: #339999;
   --gold: #ffd700;
   --black: #000;
   --dark: #111;
@@ -24,10 +26,6 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: var(--main);
-}
-
-.hover-transition {
-  transition: var(--transition);
 }
 
 .bg-main {
@@ -94,20 +92,79 @@
   color: var(--grey-4);
 }
 
-.text-main:hover {
-  color: var(--dark);
+.hover-transition {
+  transition: var(--transition);
 }
 
-.main-btn {
+.nav-link-custom {
+  color: var(--dark);
+  text-transform: uppercase;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: var(--transition);
+}
+
+.nav-link-custom:hover {
+  color: var(--main);
+}
+
+.dark-btn, .dark-btn-outline,
+.main-btn, .main-btn-outline {
+  border-radius: 0.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.dark-btn {
+  border: 1px solid var(--dark);
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.dark-btn:hover {
+  border-color: var(--grey-1);
+  background-color: var(--grey-1);
+  color: var(--light)
+}
+
+.dark-btn-outline {
   border: 1px solid var(--dark);
   background-color: transparent;
   color: var(--dark);
+}
+
+.dark-btn-outline:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.main-btn {
+  border: 1px solid var(--main);
+  background-color: var(--main);
+  color: var(--light);
   text-transform: uppercase;
   transition: var(--transition);
 }
 
 .main-btn:hover {
-  background-color: var(--dark);
+  background-color: var(--main-hover);
+  border-color: var(--main-hover);
+  color: var(--light);
+}
+
+.main-btn-outline {
+  border: 1px solid var(--main);
+  background-color: transparent;
+  color: var(--main);
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.main-btn-outline:hover {
+  background-color: var(--main);
   color: var(--light);
 }
 
@@ -140,3 +197,4 @@
 .navbar-toggler-icon:hover::before {
   color: var(--dark);
 }
+

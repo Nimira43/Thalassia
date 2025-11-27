@@ -17,10 +17,11 @@ const Header = () => {
             Thalassia
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse ibasic-navbar-nav>
+          <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
               <Nav.Link
                 href='/cart'
+                className='nav-link-custom'
               >
                 <PiShoppingCart /> Cart
               </Nav.Link>
@@ -29,8 +30,18 @@ const Header = () => {
         </Container>
       </Navbar>
       <div>
-        <h1 className='text-main hover-transition'>Test</h1>
+        <button className='dark-btn btn'>Test</button>
       </div>
+      <div>
+        <button className='dark-btn-outline btn'>Test</button>
+      </div>
+      <div>
+        <button className='main-btn btn'>Test</button>
+      </div>
+      <div>
+        <button className='main-btn-outline btn'>Test</button>
+      </div>
+
     </header>
   )
 }
