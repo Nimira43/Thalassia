@@ -62,6 +62,15 @@ const ProductPage = () => {
                   </Col>
                 </Row>
               </ListGroup.Item>
+              <ListGroup.Item>
+                <button
+                  className='btn dark-btn-outline'
+                  type='button'
+                  disabled={product.countInStock === 0}
+                >
+                  Add to Cart
+                </button>
+              </ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
