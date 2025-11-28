@@ -5,6 +5,12 @@ import Product from '../components/Product'
 const HomePage = () => {
   const [products, setProducts] = useState([])
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      
+    }
+  } [])
+
   return (
     <>
       <h1>Latest Products</h1>
