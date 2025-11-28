@@ -16,6 +16,14 @@ const ProductPage = () => {
       >
         Go Back
       </Link>
+      <Row>
+        <Col md={5}>
+        </Col>
+        <Col md={4}>
+        </Col>
+        <Col md={3}>
+        </Col>
+      </Row>
     </>
   )
 }
