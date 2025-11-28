@@ -21,10 +21,6 @@
   --transition: all 0.5s ease-in;
 }
 
-main {
-  min-height: 80vh; /* experimental */
-}
-
 .logo {
   font-family: 'Ephesis', cursive;
   font-size: 2rem;
@@ -197,18 +193,21 @@ main {
   color: var(--light);
 }
 
-/* experimental */
-.rating span {
-  margin: 0.1rem;           
-}
-
-.rating svg {
-  color: var(--main);
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .rating-text {
   font-size: 0.8rem;
-  font-weight: 400;
-  padding-left: 0.5rem;
+  padding-top: 0.3rem
 }
-/* end of experimental */
+
+.product-title {
+  height: 2.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

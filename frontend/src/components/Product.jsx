@@ -17,12 +17,19 @@ const Product = ({ product }) => {
           to={`/product/${product._id}`}
         >
           <Card.Title
-            className='text-dark fw-normal'
+            className='text-dark fw-normal product-title'
             as='div'
           >
-              {product.name}
+            {product.name}
           </Card.Title>
         </Link>
+        <Card.Text as='div'>
+          <Rating
+            value={product.rating}
+            text={`${product.numReviews} reviews`}
+          />
+        </Card.Text>
+
         <Card.Text
           className='text-main fw-normal'
           as='h3'
