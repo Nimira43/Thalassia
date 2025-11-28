@@ -3,6 +3,8 @@ import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
 
 const HomePage = () => {
+  const [products, setProducts] = useState([])
+
   return (
     <>
       <h1>Latest Products</h1>
