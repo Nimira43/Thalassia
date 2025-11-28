@@ -23,6 +23,10 @@ const router = createBrowserRouter(
         index
         element={<HomePage />}
       />
+      <Route
+        path='/product/:id'
+        element={<ProductPage />}
+      />
     </Route>
   )
 )

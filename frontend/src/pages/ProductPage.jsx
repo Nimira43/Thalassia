@@ -6,7 +6,7 @@ const ProductPage = () => {
   const product = [products.find((p) => p._id === productId)]
   
   return ( 
-
+    <div>ProductPage</div>
   )
 }
  
