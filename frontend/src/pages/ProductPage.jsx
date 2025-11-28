@@ -10,6 +10,12 @@ const ProductPage = () => {
   
   return ( 
     <>
+      <Link
+        to='/'
+        className='btn dark-btn-outline my-3'
+      >
+        Go Back
+      </Link>
     </>
   )
 }
