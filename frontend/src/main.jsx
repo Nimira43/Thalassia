@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './index.css'
 import App from './App.jsx'
 import HomePage from './pages/HomePage.jsx'
+import ProductPage from './pages/ProductPage.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
