@@ -51,6 +51,17 @@ const ProductPage = () => {
                   </Col>
                 </Row>
               </ListGroup.Item>
+              <ListGroup.Item>
+                <Row>
+                  <Col>Status:</Col>
+                  <Col className='fw-bold text-main'>
+                    {product.countInStock > 0
+                      ? 'In Stock'
+                      : 'Out of Stock'
+                    }
+                  </Col>
+                </Row>
+              </ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
