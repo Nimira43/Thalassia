@@ -35,6 +35,9 @@ const ProductPage = () => {
                 text={`${product.numReviews} reviews`}
               />
             </ListGroup.Item>
+            <ListGroup.Item className='fw-bold text-main'>
+              £{product.price}
+            </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={3}>
