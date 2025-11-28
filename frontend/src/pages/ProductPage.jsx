@@ -38,6 +38,9 @@ const ProductPage = () => {
             <ListGroup.Item className='fw-bold text-main'>
               £{product.price}
             </ListGroup.Item>
+            <ListGroup.Item>
+              {product.description}
+            </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={3}>
