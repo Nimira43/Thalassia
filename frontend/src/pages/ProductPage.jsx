@@ -46,6 +46,9 @@ const ProductPage = () => {
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
+                  <Col className='fw-bold text-main'>
+                    £{product.price}
+                  </Col>
                 </Row>
               </ListGroup.Item>
             </ListGroup>
