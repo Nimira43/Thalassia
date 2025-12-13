@@ -40,23 +40,26 @@ const orderSchema = mongoose.Schema({
     required: true,
     default: 0.0,
   },
-  image: {
-    type: String,
+  taxPrice: {
+    type: Number,
     required: true,
+    default: 0.0,
   },
-  brand: {
-    type: String,
+  shippingPrice: {
+    type: Number,
     required: true,
+    default: 0.0,
   },
-  category: {
-    type: String,
+  totalPrice: {
+    type: Number,
     required: true,
+    default: 0.0,
   },
-  description: {
-    type: String,
+  isPaid: {
+    type: Boolean,
     required: true,
+    default: false,
   },
-  reviews: [reviewSchema],
   rating: {
     type: Number,
     required: true,
