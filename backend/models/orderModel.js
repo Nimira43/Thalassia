@@ -68,20 +68,13 @@ const orderSchema = mongoose.Schema({
     required: true,
     default: false,
   },
-  price: {
-    type: Number,
-    required: true,
-    default: 0,
+  deliveredAt: {
+    type: Date,
   },
-  countInStock: {
-    type: Number,
-    required: true,
-    default: 0
-  }
 }, {
   timestamps: true,
 })
 
-const Product = mongoose.model('Product', productSchema)
+const Order = mongoose.model('Order', orderSchema)
 
-export default Product
+export default Order
