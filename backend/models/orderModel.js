@@ -1,15 +1,19 @@
 import mongoose from 'mongoose'
 
-const reviewSchema = mongoose.Schema({
+const orderSchema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: 'User',
   },
-  name: {
-    type: String,
-    required: true,
-  },
+  orderItems: [
+    {
+      name: {type: String, required: true},
+      qty: {type: Number, required: true},
+      image: {type: String, required: true},
+      price: {type: Number, required: true},
+    }
+  ],
   rating: {
     type: Number,
     required: true,
