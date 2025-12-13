@@ -17,7 +17,7 @@ const orderSchema = mongoose.Schema({
         required: true,
         ref: 'Product',
       },
-    }
+    },
   ],
   shippingAddress: {
     address: { type: String, required: true },
@@ -29,23 +29,16 @@ const orderSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  comment: {
-    type: String,
+  paymentResult: {
+    id: { type: String },
+    status: { type: String },
+    update_time: { type: String },
+    email_address: { type: String},
+  }, 
+  itemsPrice: {
+    type: Number,
     required: true,
-  }  
-}, {
-  timestamps: true
-})
-
-const productSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: 'User',
-  },
-  name: {
-    type: String,
-    required: true,
+    default: 0.0,
   },
   image: {
     type: String,
