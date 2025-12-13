@@ -60,15 +60,13 @@ const orderSchema = mongoose.Schema({
     required: true,
     default: false,
   },
-  rating: {
-    type: Number,
-    required: true,
-    default: 0,
+  paidAt: {
+    type: Date,
   },
-  numReviews: {
-    type: Number,
+  isDelivered: {
+    type: Boolean,
     required: true,
-    default: 0,
+    default: false,
   },
   price: {
     type: Number,
