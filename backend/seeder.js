@@ -35,4 +35,10 @@ const importData = async () => {
   }
 }
 
-const destroyData = async () => {}
+const destroyData = async () => {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
