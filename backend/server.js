@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js' 
 dotenv.config()
 import products from './data/products.js'
+import productRoutes from './routes/productRoutes.js'
 
 connectDB()
 
