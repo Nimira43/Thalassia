@@ -2,11 +2,11 @@ import express from 'express'
 
 const router = express.Router()
 
-app.get('/api/products', (req, res) => {
+router.get('/api/products', (req, res) => {
   res.json(products)
 })
 
-app.get('/api/products/:id', (req, res) => {
+router.get('/api/products/:id', (req, res) => {
   const product = products.find((p) => p._id === req.params.id)
   res.json(product)
 })
