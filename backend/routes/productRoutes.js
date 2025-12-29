@@ -1,7 +1,6 @@
 import express from 'express'
-import products from '../data/products.js'
-
 const router = express.Router()
+import asyncHandler from '../middleware/asyncHandler'
 
 router.get('/', (req, res) => {
   res.json(products)
