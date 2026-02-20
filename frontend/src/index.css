@@ -211,3 +211,9 @@
   white-space: nowrap;
 }
 
+.form-control:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: var(--grey-1) !important;
+  transition: var(--transition);
+}
