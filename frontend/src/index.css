@@ -7,7 +7,7 @@
 
 :root {
   --main: #ff4500;
-  --main-hover: #ff7040;
+  --main-hover: #fe774a;
   --support: #008080;
   --support-hover: #339999;
   --gold: #ffd700;
@@ -174,6 +174,7 @@
   border: 1px solid var(--main);
   background-color: var(--main);
   color: var(--light);
+
 }
 
 .main-btn:hover {
@@ -216,4 +217,33 @@
   outline: none !important;
   border-color: var(--grey-1) !important;
   transition: var(--transition);
+}
+
+.cart-badge {
+  background-color: var(--main) !important;
+  margin-left: 5px;
+}
+
+.alert-message {
+  background-color: var(--grey-4);
+  color: var(--main);
+  font-weight: 400;
+  text-align: center;
+}
+
+.alert-message a {
+  display: block;
+  color: var(--dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 5px;
+  transition: var(--transition);
+}
+
+.alert-message a:hover {
+  color: var(--main);
+}
+
+.card-cart {
+  padding: 1rem;
 }

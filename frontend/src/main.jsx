@@ -14,6 +14,7 @@ import './index.css'
 import App from './App.jsx'
 import HomePage from './pages/HomePage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
+import CartPage from './pages/CartPage.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,10 @@ const router = createBrowserRouter(
       <Route
         path='/product/:id'
         element={<ProductPage />}
+      />
+      <Route
+        path='/cart'
+        element={<CartPage />}
       />
     </Route>
   )
