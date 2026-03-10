@@ -3,7 +3,7 @@ import { Row, Col, ListGroup, Image, Form, Card } from 'react-bootstrap'
 import { VscTrash } from "react-icons/vsc"
 import Message from '../components/Message'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from '../slices/cartSlice'
+import { addToCart, removeFromCart } from '../slices/cartSlice'
 
 const CartPage = () => {
   const navigate = useNavigate()
@@ -14,6 +14,14 @@ const CartPage = () => {
 
   const addToCartHandler = async (product, qty) => {
     dispatch(addToCart({...product, qty}))
+  }
+  
+  const removeFromCartHandler = async (id) => {
+    dispatch(removeFromCart(id))
+  }
+
+  const checkoutHandler = () => {
+    navigate('/login?redirect=/shipping')
   }
 
   return (  
@@ -29,8 +37,8 @@ const CartPage = () => {
           <ListGroup variant='flush'>
             {cartItems.map((item) => (
               <ListGroup.Item key={item._id}>
-                <Row>
-                  <Col md={2}>
+                <Row className='align-items-center py-2'>
+                  <Col xs={4} md={2} className='mb-3 mb-md-0'>
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -38,15 +46,15 @@ const CartPage = () => {
                       rounded
                     />
                   </Col>
-                  <Col md={3}>
-                    <Link to={`/product/${item._id}`}>
+                  <Col xs={8} md={3} className='mb-2 mb-md-0'>
+                    <Link to={`/product/${item._id}`} className='cart-link'>
                       {item.name}
                     </Link>
                   </Col>
-                  <Col md={2}>
+                  <Col xs={5} md={2} className='mb-2 mb-md-0'>
                     £{item.price}
                   </Col>
-                  <Col md={2}>
+                  <Col xs={5} md={2} className='mb-2 mb-md-0'>
                     <Form.Control
                       as='select'
                       value={item.qty}
@@ -59,10 +67,11 @@ const CartPage = () => {
                       ))}
                     </Form.Control>
                   </Col>
-                  <Col md={2}>
+                  <Col xs={2} md={2} className='mb-2 mb-md-0'>
                     <button
-                      className='btn main-btn'
+                      className='btn main-btn w-100 w-md-auto'
                       type='button'
+                      onClick={() => removeFromCartHandler(item._id)}
                     >
                       <VscTrash />
                     </button>
@@ -74,7 +83,7 @@ const CartPage = () => {
         )}
       </Col>
       <Col md={4}>
-        <Card>
+        <Card className='p-2'>
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
@@ -94,6 +103,7 @@ const CartPage = () => {
               className='btn dark-btn-outline'
               type='button' 
               disabled={cartItems.length === 0}
+              onClick={checkoutHandler}
             >
               Proceed to Checkout
             </button>

@@ -139,6 +139,17 @@
   color: var(--main);
 }
 
+.cart-link {
+  color: var(--grey-1);
+  text-decoration: none;
+  font-weight: 400;
+  transition: var(--transition);
+}
+
+.cart-link:hover {
+  color: var(--main);
+}
+
 .dark-btn, .dark-btn-outline,
 .main-btn, .main-btn-outline {
   border-radius: 0.25rem;
