@@ -258,3 +258,14 @@
 .card-cart {
   padding: 1rem;
 }
+
+.register-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--dark);
+  transition: var(--transition);
+}
+
+.register-link:hover {
+  color: var(--main);
+}
