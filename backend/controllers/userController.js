@@ -20,7 +20,7 @@ const authUser = asyncHandler(async (req, res) => {
     throw new Error('Invalid email or password.')
   }
 
-  res.send('Auth User')
+  // res.send('Auth User')
 })
 
 const registerUser = asyncHandler(async (req, res) => {
