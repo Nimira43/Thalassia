@@ -4,16 +4,19 @@ import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer'
 import Loader from '../components/Loader'
-import { useLoginMutation } from '../slices/userApiSlice'
+import { useRegisterMutation } from '../slices/userApiSlice'
 import { setCredentials } from '../slices/authSlice'
 import { toast } from 'react-toastify'
 
-const LoginPage = () => {
+const RegisterPage = () => {
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const [login, { isLoading }] = useLoginMutation()
+  const [register, { isLoading }] = useRegisterMutation()
   const { userInfo } = useSelector((state) => state.auth)
   const { search } = useLocation()
   const sp = new URLSearchParams(search)
@@ -27,21 +30,46 @@ const LoginPage = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    try {
-      const res = await login({ email, password}).unwrap()
-      dispatch(setCredentials({ ...res }))
-      navigate(redirect)
-    } catch (err) {
-      toast.error(err?.data?.message) || err.error
-    }
+
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match.')
+      return
+    } else {
+      try {
+        const res = await register({
+          name,
+          email,
+          password
+        }).unwrap()
+        dispatch(setCredentials({ ...res }))
+        navigate(redirect)
+      } catch (err) {
+        toast.error(err?.data?.message) || err.error
+      }  
+    }    
   }
 
   return (  
     <FormContainer>
       <h1 className='text-center my-4 text-uppercase'>
-        Login
+        Register
       </h1>
       <Form onSubmit={submitHandler}>
+        <Form.Group
+          controlId='name'
+          className='my-3'
+        >
+          <Form.Label>
+            Name
+          </Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Enter name'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            autoComplete='name'
+          ></Form.Control>
+        </Form.Group>
         <Form.Group
           controlId='email'
           className='my-3'
@@ -71,29 +99,44 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             autoComplete='password'
           ></Form.Control>
+        </Form.Group>  
+        <Form.Group
+          controlId='confirmPassword'
+          className='my-3'
+        >
+          <Form.Label>
+            Confirm Password
+          </Form.Label>
+          <Form.Control
+            type='password'
+            placeholder='Confirm password'
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            autoComplete='confirmPassword'
+          ></Form.Control>
         </Form.Group>
         <button
           className='btn main-btn mt-2 w-100'
           type='submit'
           disabled={isLoading}
         >
-          Login
+          Register
         </button>
         {isLoading  && <Loader />}
         <Row className='py-3'>
           <Col className='d-flex align-items-center justify-content-center'>
             <span className='me-2'>
-              Not registered?
+              Already registered?
             </span>
             <Link
               to={
                 redirect
-                  ? `/register?redirect=${redirect}` 
-                  : '/register'
+                  ? `/login?redirect=${redirect}` 
+                  : '/login'
               }
-              className='register-link'
+              className='login-link'
             >
-              Register
+              Login
             </Link>
           </Col>
         </Row>
@@ -102,4 +145,4 @@ const LoginPage = () => {
   )
 }
  
-export default LoginPage
+export default RegisterPage

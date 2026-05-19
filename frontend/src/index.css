@@ -18,7 +18,7 @@
   --grey-2: #999;
   --grey-3: #ccc;
   --grey-4: #eee;
-  --transition: all 0.5s ease-in;
+  --transition: all 0.5s ease-in-out;
 }
 
 .logo {
@@ -185,7 +185,6 @@
   border: 1px solid var(--main);
   background-color: var(--main);
   color: var(--light);
-
 }
 
 .main-btn:hover {
@@ -259,13 +258,23 @@
   padding: 1rem;
 }
 
-.register-link {
+.form-label {
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: var(--grey-2) !important;
+}
+
+.register-link,
+.login-link {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--dark);
   transition: var(--transition);
 }
 
-.register-link:hover {
+.register-link:hover,
+.login-link:hover {
   color: var(--main);
 }
