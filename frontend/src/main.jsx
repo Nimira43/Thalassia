@@ -11,6 +11,7 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './index.css'
+import PrivateRoute from './components/PrivateRoute.jsx'
 import App from './App.jsx'
 import HomePage from './pages/HomePage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
@@ -46,9 +47,14 @@ const router = createBrowserRouter(
         element={<RegisterPage />}
       />
       <Route
-        path='/shipping'
-        element={<ShippingPage />}
-      />
+        path=''
+        element={<PrivateRoute />}
+      >
+        <Route
+          path='/shipping'
+          element={<ShippingPage />}
+        />
+      </Route>
     </Route>
   )
 )
