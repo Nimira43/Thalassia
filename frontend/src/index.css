@@ -278,3 +278,8 @@ input::placeholder {
 .login-link:hover {
   color: var(--main);
 }
+
+.checkout-steps{
+  color: var(--main) !important;
+  font-weight: 400;
+}
