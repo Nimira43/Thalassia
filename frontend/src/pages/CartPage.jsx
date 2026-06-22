@@ -100,7 +100,7 @@ const CartPage = () => {
             </ListGroup.Item>
             <ListGroup.Item>
             <button
-              className='btn dark-btn-outline'
+              className='btn main-btn'
               type='button' 
               disabled={cartItems.length === 0}
               onClick={checkoutHandler}
