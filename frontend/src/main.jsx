@@ -23,59 +23,24 @@ import ShippingPage from './pages/shippingPage.jsx'
 import PaymentPage from './pages/PaymentPage.jsx'
 import PlaceOrderPage from './pages/PlaceOrderPage.jsx'
 import OrderPage from './pages/OrderPage.jsx'
-import ProfilePage from './pages/ProfilePAge.jsx'
+import ProfilePage from './pages/ProfilePage.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route
-      path='/'
-      element={<App />}
-    >
-      <Route
-        index
-        element={<HomePage />}
-      />
-      <Route
-        path='/product/:id'
-        element={<ProductPage />}
-      />
-      <Route
-        path='/cart'
-        element={<CartPage />}
-      />
-      <Route
-        path='/login'
-        element={<LoginPage />}
-      />
-      <Route
-        path='/register'
-        element={<RegisterPage />}
-      />
-      <Route
-        path=''
-        element={<PrivateRoute />}
-      >
-        <Route
-          path='/shipping'
-          element={<ShippingPage />}
-        />
-        <Route
-          path='/payment'
-          element={<PaymentPage />}
-        />
-        <Route
-          path='/placeorder'
-          element={<PlaceOrderPage />}
-        />
-        <Route
-          path='/order/:id'
-          element={<OrderPage />}
-        />
-        <Route
-          path='/profile'
-          element={<ProfilePage />}
-        />
-      </Route>
+    <Route path='/' element={<App />}>
+      <Route index element={<HomePage />} />
+      <Route path='/product/:id' element={<ProductPage />} />
+      <Route path='/cart' element={<CartPage />} />
+      <Route path='/login' element={<LoginPage />} />
+      <Route path='/register' element={<RegisterPage />} />
+      
+      <Route path='' element={<PrivateRoute />}>
+        <Route path='/shipping' element={<ShippingPage />} />
+        <Route path='/payment' element={<PaymentPage />} />
+        <Route path='/placeorder' element={<PlaceOrderPage />} />
+        <Route path='/order/:id' element={<OrderPage />} />
+        <Route path='/profile' element={<ProfilePage />} />
+      </Route>    
     </Route>
   )
 )

@@ -18,7 +18,6 @@ const ProfilePage = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [updateProfile, { isLoading: loadingUpdateProfile}] = useProfileMutation()
-
   const { data: orders, isLoading, error } = useGetMyOrdersQuery()
 
   useEffect(() => {
